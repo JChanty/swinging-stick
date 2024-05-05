@@ -1,0 +1,169 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        01/29/2024  14:32:37  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE Main.obj TO LED_stick RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  Main.obj (MAIN)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  LED_stick (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0023H     UNIT         ?DT?MAIN
+            IDATA   002BH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     008CH     UNIT         ?C_C51STARTUP
+            CODE    008FH     0036H     UNIT         ?PR?MAIN?MAIN
+            CODE    00C5H     002BH     UNIT         ?C_INITSEG
+            CODE    00F0H     0021H     UNIT         ?PR?_P3P5?MAIN
+            CODE    0111H     0015H     UNIT         ?PR?_DELAYMS?MAIN
+            CODE    0126H     000BH     UNIT         ?PR?_P1P3P5?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   LED_stick (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN
+  +--> ?PR?_P1P3P5?MAIN
+  +--> ?PR?_DELAYMS?MAIN
+
+?PR?_P1P3P5?MAIN
+  +--> ?PR?_P3P5?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  LED_stick (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/29/2024  14:32:37  PAGE 2
+
+
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0092H         PUBLIC        P1M0
+  D:0091H         PUBLIC        P1M1
+  D:0080H         PUBLIC        P0
+  D:00B2H         PUBLIC        P3M0
+  D:0090H         PUBLIC        P1
+  D:00B1H         PUBLIC        P3M1
+  D:00A0H         PUBLIC        P2
+  D:00CAH         PUBLIC        P5M0
+  D:00B0H         PUBLIC        P3
+  D:00C9H         PUBLIC        P5M1
+  D:00C0H         PUBLIC        P4
+  D:00C8H         PUBLIC        P5
+  D:00E8H         PUBLIC        P6
+  D:00F8H         PUBLIC        P7
+  C:00F0H         PUBLIC        _P3P5
+  C:0126H         PUBLIC        _P1P3P5
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  D:00D8H         PUBLIC        CCON
+  C:008FH         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  B:00B0H.2       PUBLIC        P32
+  D:0088H         PUBLIC        TCON
+  B:00B0H.3       PUBLIC        P33
+  B:00B0H.4       PUBLIC        P34
+  B:00B0H.5       PUBLIC        P35
+  B:00C8H.4       PUBLIC        P54
+  B:00B0H.6       PUBLIC        P36
+  D:0008H         PUBLIC        dat
+  B:00C8H.5       PUBLIC        P55
+  B:00B0H.7       PUBLIC        P37
+  D:000AH         PUBLIC        disp_cjm
+  C:0111H         PUBLIC        _Delayms
+  B:00B0H.0       PUBLIC        mercury_key0
+  D:002AH         PUBLIC        i
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          _P3P5
+  D:0007H         SYMBOL        hex
+  C:00F0H         LINE#         9
+  C:00F0H         LINE#         10
+  C:00F0H         LINE#         11
+  C:00F4H         LINE#         12
+  C:00F9H         LINE#         13
+  C:00FDH         LINE#         14
+  C:0101H         LINE#         15
+  C:0105H         LINE#         16
+  C:0109H         LINE#         17
+  C:010DH         LINE#         18
+  C:0110H         LINE#         19
+  -------         ENDPROC       _P3P5
+  -------         PROC          _P1P3P5
+  D:0004H         SYMBOL        temp
+  -------         DO            
+  D:0007H         SYMBOL        temp1
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/29/2024  14:32:37  PAGE 3
+
+
+  -------         ENDDO         
+  C:0126H         LINE#         21
+  C:012AH         LINE#         22
+  C:012AH         LINE#         23
+  C:012AH         LINE#         24
+  C:012CH         LINE#         25
+  C:012EH         LINE#         26
+  -------         ENDPROC       _P1P3P5
+  -------         PROC          _DELAYMS
+  D:0006H         SYMBOL        time
+  -------         DO            
+  D:0005H         SYMBOL        i
+  D:0004H         SYMBOL        j
+  -------         ENDDO         
+  C:0111H         LINE#         29
+  C:0111H         LINE#         30
+  C:0111H         LINE#         32
+  C:011BH         LINE#         33
+  C:011BH         LINE#         34
+  C:011DH         LINE#         35
+  C:011FH         LINE#         37
+  C:011FH         LINE#         38
+  C:0121H         LINE#         39
+  C:0123H         LINE#         40
+  C:0125H         LINE#         41
+  -------         ENDPROC       _DELAYMS
+  -------         PROC          MAIN
+  C:008FH         LINE#         46
+  C:008FH         LINE#         47
+  C:008FH         LINE#         48
+  C:0095H         LINE#         49
+  C:009AH         LINE#         50
+  C:009FH         LINE#         51
+  C:00A1H         LINE#         52
+  C:00A1H         LINE#         53
+  C:00A1H         LINE#         54
+  C:00A4H         LINE#         55
+  C:00A4H         LINE#         56
+  C:00B3H         LINE#         57
+  C:00BAH         LINE#         58
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+Program Size: data=44.0 xdata=0 code=305
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
